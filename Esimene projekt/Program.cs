@@ -54,43 +54,61 @@ namespace Esimene_projekt
             //    Console.WriteLine("Vabandust, alaealisi sisse ei lasta, head päeva");
 
             //Programm 3 vaheajaks
-            //string KasutajaNimi = "";
-            //string Parool = "";
-            //Console.WriteLine("Tere, sisse logimiseks palun sisestage oma nimi");
-            //KasutajaNimi = Console.ReadLine();
-            //if (KasutajaNimi == "user1")
+            //string kasutajanimi = "";
+            //string parool = "";
+            //Console.WriteLine ("tere, sisse logimiseks palun sisestage oma nimi");
+            //kasutajanimi = Console.ReadLine();
+            //if (kasutajanimi == "user1")
             //{
-            //    Console.WriteLine("Tere user1, palun sisestage oma parool");
-            //    Parool = Console.ReadLine();
-            //    if (Parool == "qwerty")
+            //    Console.WriteLine(); ("tere user1, palun sisestage oma parool");
+            //    parool = Console.ReadLine();
+            //    if (parool == "qwerty")
             //    {
-            //        Console.WriteLine("Tere tulemast user1, olete edukalt sisse logitud");
+            //        Console.WriteLine ("tere tulemast user1, olete edukalt sisse logitud");
             //    }
             //    else
             //    {
-            //        Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud");
+            //        Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
             //    }
             //}
             //else
             //{
-            //    Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud");
+            //    Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
             //}
 
             //Programm 3 vaheajaks aga improved
-            string KasutajaNimi = "";
-            string Parool = "";
-            Console.WriteLine("Tere, sisse logimiseks palun sisestage oma nimi");
-            KasutajaNimi = Console.ReadLine();
-            Console.WriteLine("Palun sisestage oma parool");
-            Parool = Console.ReadLine();
-            if (KasutajaNimi == "user1" && Parool == "qwerty")
-            {
-                Console.WriteLine("Olete edukalt sisse logitud, user1!");
-            }
-            else
-            {
-                Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud.");
-            }
+            //string KasutajaNimi = "";
+            //string Parool = "";
+            //Console.WriteLine("Tere, sisse logimiseks palun sisestage oma nimi");
+            //KasutajaNimi = Console.ReadLine();
+            //Console.WriteLine("Palun sisestage oma parool");
+            //Parool = Console.ReadLine();
+            //if (KasutajaNimi == "user1" && Parool == "qwerty")
+            //{
+            //    Console.WriteLine("Olete edukalt sisse logitud, user1!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud.");
+            //} 
+
+            //*
+            //Teooria
+
+            //int mingiArv = 4;
+            //int mingiArv += 15;
+
+            Console.WriteLine("Palun sisesta oma vanus");
+            float kasutajavanus = float.Parse(Console.ReadLine());
+            Console.WriteLine("Palun sisesta om vanavanema vanus");
+            int kasutajavanavanemavanus = int.Parse(Console.ReadLine());
+            int vanustevahe = kasutajavanavanemavanus - kasutajavanus;
+            Console.WriteLine("Ma ei tea mis see olema peaks, aga " + (kasutajavanavanemavanus - kasutajavanus));
+            Console.WriteLine("Kui palju vanem sa nüüd oled?");
+            kasutajavanus += int.Parse(Console.ReadLine());
+            Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
+
+
         }
     }
 }
