@@ -92,25 +92,50 @@ namespace Esimene_projekt
             //    Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud.");
             //} 
 
-            //*
-            //Teooria
+            //Näiteülesanne 5
+            Console.WriteLine("Kui kaugele oli su viimane kuulitõuge (m)?");
+            float kaugus = float.Parse(Console.ReadLine());
+            if (kaugus <= 1.00 && kaugus >= 0.00)
+            {
+                Console.WriteLine("Sa suudad kindlasti rohkem, cmon bruh");
+            }
+            else if (kaugus <= 2.00 && kaugus >= 1.01)
+            {
+                Console.WriteLine("Noh tuleb juba, jõuad veel!");
+            }
+            else if (kaugus <= 3.00 && kaugus >= 2.01)
+            {
+                Console.WriteLine("Tubli, kolm meetrit umbes, peaaegu, vist... not sure");
+            }
+            else if (kaugus < 0)
+            {
+                Console.WriteLine("Ma ei käskinud selja taha visata...");
+            }
+            else
+            {
+                Console.WriteLine("Ossaraks, seda on varsti orbiidilt näha");
+            }
 
-            //int mingiArv = 4;
-            //int mingiArv += 15;
 
-            //Console.WriteLine("Palun sisesta oma vanus");
-            //int kasutajavanus = int.Parse(Console.ReadLine());
-            //Console.WriteLine("Palun sisesta om vanavanema vanus");
-            //int kasutajavanavanemavanus = int.Parse(Console.ReadLine());
-            //int vanustevahe = kasutajavanavanemavanus - kasutajavanus;
-            //Console.WriteLine("Ma ei tea mis see olema peaks, aga " + (kasutajavanavanemavanus - kasutajavanus));
-            //Console.WriteLine("Kui palju vanem sa nüüd oled?");
-            //kasutajavanus += int.Parse(Console.ReadLine());
-            //Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
+                //*
+                //Teooria
 
-            //* -= O M I S T U S O P E R A A T O R I D =-   */
-            // =    -> üksik võrdusmärk omistab muutuja sisse väärtuse, mida adresseritakse muutuja enda nimega
-            int muutuja = 1;
+                //int mingiArv = 4;
+                //int mingiArv += 15;
+
+                //Console.WriteLine("Palun sisesta oma vanus");
+                //int kasutajavanus = int.Parse(Console.ReadLine());
+                //Console.WriteLine("Palun sisesta om vanavanema vanus");
+                //int kasutajavanavanemavanus = int.Parse(Console.ReadLine());
+                //int vanustevahe = kasutajavanavanemavanus - kasutajavanus;
+                //Console.WriteLine("Ma ei tea mis see olema peaks, aga " + (kasutajavanavanemavanus - kasutajavanus));
+                //Console.WriteLine("Kui palju vanem sa nüüd oled?");
+                //kasutajavanus += int.Parse(Console.ReadLine());
+                //Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
+
+                //* -= O M I S T U S O P E R A A T O R I D =-   */
+                // =    -> üksik võrdusmärk omistab muutuja sisse väärtuse, mida adresseritakse muutuja enda nimega
+                int muutuja = 1;
             // +=   -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva väärtuse
             muutuja += 2;
             // -=   -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujas olevast väärtusest võrdusmärgi teisel pool oleva väärtuse
