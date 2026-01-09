@@ -138,38 +138,38 @@ namespace Esimene_projekt
             }
 
 
-                //*
-                //Teooria
+            //*
+            //Teooria
 
-                //// andmetüübid
-                //string tekst = "mingi loetav tekst";
-                //char täht = 'a';
-                //int arv = 1;
-                //float komakohaga = 2.5f; //32bit
-                //double suuremkomakohaga = 1.5d; //64bit
-                //decimal kümnendsüsteemikomakohaga = 1.5M;
-                //var x = 123; //umbmäärane andmetüübiga ajutine muutuja
-                //var y = "tekst";
-                //bool yesorno = false; //true or false
+            //// andmetüübid
+            //string tekst = "mingi loetav tekst";
+            //char täht = 'a';
+            //int arv = 1;
+            //float komakohaga = 2.5f; //32bit
+            //double suuremkomakohaga = 1.5d; //64bit
+            //decimal kümnendsüsteemikomakohaga = 1.5M;
+            //var x = 123; //umbmäärane andmetüübiga ajutine muutuja
+            //var y = "tekst";
+            //bool yesorno = false; //true or false
 
-                ////string string = "abc"; //bad
-                //string sõna = "abc"; //very gud
-                //int mingiArv = 4;
-                //int mingiArv += 15;
+            ////string string = "abc"; //bad
+            //string sõna = "abc"; //very gud
+            //int mingiArv = 4;
+            //int mingiArv += 15;
 
-                //Console.WriteLine("Palun sisesta oma vanus");
-                //int kasutajavanus = int.Parse(Console.ReadLine());
-                //Console.WriteLine("Palun sisesta om vanavanema vanus");
-                //int kasutajavanavanemavanus = int.Parse(Console.ReadLine());
-                //int vanustevahe = kasutajavanavanemavanus - kasutajavanus;
-                //Console.WriteLine("Ma ei tea mis see olema peaks, aga " + (kasutajavanavanemavanus - kasutajavanus));
-                //Console.WriteLine("Kui palju vanem sa nüüd oled?");
-                //kasutajavanus += int.Parse(Console.ReadLine());
-                //Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
+            //Console.WriteLine("Palun sisesta oma vanus");
+            //int kasutajavanus = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Palun sisesta om vanavanema vanus");
+            //int kasutajavanavanemavanus = int.Parse(Console.ReadLine());
+            //int vanustevahe = kasutajavanavanemavanus - kasutajavanus;
+            //Console.WriteLine("Ma ei tea mis see olema peaks, aga " + (kasutajavanavanemavanus - kasutajavanus));
+            //Console.WriteLine("Kui palju vanem sa nüüd oled?");
+            //kasutajavanus += int.Parse(Console.ReadLine());
+            //Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
 
-                //* -= O M I S T U S O P E R A A T O R I D =-   */
-                // =    -> üksik võrdusmärk omistab muutuja sisse väärtuse, mida adresseritakse muutuja enda nimega
-                int muutuja = 1;
+            /* -= O M I S T U S O P E R A A T O R I D =-   */
+            // =    -> üksik võrdusmärk omistab muutuja sisse väärtuse, mida adresseritakse muutuja enda nimega
+            int muutuja = 1;
             // +=   -> võrdusmärk mille ees on pluss, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva väärtuse
             muutuja += 2;
             // -=   -> võrdusmärk mille ees on miinus, automaatselt lahutab muutujas olevast väärtusest võrdusmärgi teisel pool oleva väärtuse
@@ -187,7 +187,7 @@ namespace Esimene_projekt
             muutuja--;
 
 
-            //* -= V Õ R D U S O P E R A A T O R I D =-   */
+            /* -= V Õ R D U S O P E R A A T O R I D =-   */
             // ==   -> "on võrdne/on täpselt sama" võrdusmärkide ühel pool olev objekt peab vastama oma olemuselt täpselt võrdusmärkide teisel pool oleva objektiga
             // >    -> "on suurem kui" märgist vasakul pool olev objekt peaks olema suurem kui paremal pool olev objekt
             // <    -> "on väiksem kui" märgist vasakul pool olev objekt peaks olema väiksem kui paremal pool olev objekt
@@ -204,6 +204,20 @@ namespace Esimene_projekt
             // !    -> "NOT" loogiline tehe, mida kasutatakse tingimuse avaldise tulemuse inverteerimiseks,
             //         tulemus mis muidu tagastaks "true", hüüumärgi abil nüüd tagastab "false", ja vastupidi - tulemus mis muidu tagastaks "false" nüüd tagastab "true".
             //         eh teisisõnu : true = false / false = true
+
+            /* -= T I N G I M U S L A U S E =-   */
+            if (true)      //kaitstud sõna "if" kutsub esile tingimuslause, mille tingimuse avaldis on sellele järgnevatele () sulgude vahel
+            {              //Järgneb {} loogiliste sulgude vahel koodiplokk, mis teostatakse siis, kui tingimuse avaldis annab tulemusena "true", "false" tulemuse puhul jäetakse kood vahele
+            }
+            else if (true) // Kaitstud sõna "else" ja "if" (koos "else if") kutsuvad esile sekundaarse tingimuslause, mille tingimus on samamoode sellele järgnevate sulgude vahel, ning millele peab alati eelnema "if" või teine "else if"
+            { }            // Else if tingimust kontrollitakse ainult siis, kui sellele eelnev tingimus tagastab avaldise tulemusena "false"
+                           // "false" puhul jäetakse plokk vahele
+            else           // kaitstud sõna "else" kutsub esile järeltingimuslause, millele peab eelnema alati kas "if" või "else if" tingimuslause
+                           // mille koodploki sisu täidetakse ilma oma tingimuse avaldise kontrollita (ei oma avaldist) kuna else koodiplokk teostatakse
+                           // kõikide teiste tingimuste läbikukkumisel (kõik eelnevad tagastavad tulemusena "false")
+            {
+
+            }
 
         }
     }
