@@ -138,15 +138,15 @@ namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteineri
             //    }
             //}
 
-            int minuarv = 9001;
-            Console.WriteLine(minuarv);
-            double minuDouble = minuarv;
-            Console.WriteLine(minuDouble);
+            //int minuarv = 9001;
+            //Console.WriteLine(minuarv);
+            //double minuDouble = minuarv;
+            //Console.WriteLine(minuDouble);
 
-            double minuuusDouble = 6.7;
-            Console.WriteLine(minuuusDouble);
-            int minuuusArv = (int)minuuusDouble;
-            Console.WriteLine(minuuusArv);
+            //double minuuusDouble = 6.7;
+            //Console.WriteLine(minuuusDouble);
+            //int minuuusArv = (int)minuuusDouble;
+            //Console.WriteLine(minuuusArv);
 
             double newData1 = 1.23d;
             float newFloat1 = (float)newData1;
@@ -159,9 +159,6 @@ namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteineri
             float backToFloat = backToLong;
             double backToDouble = backToFloat;
 
-            
-
-
             //Console.WriteLine("Palun sisesta oma vanus");
             //int kasutajavanus = int.Parse(Console.ReadLine());
             //Console.WriteLine("Palun sisesta om vanavanema vanus");
@@ -172,6 +169,105 @@ namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteineri
             //kasutajavanus += int.Parse(Console.ReadLine());
             //Console.WriteLine("Vanuste vahe on nüüd: " + (kasutajavanavanemavanus - kasutajavanus));
 
+            //Console.WriteLine("Palun sisesta esimene arv.");
+            //float arv1 = 0;
+            //arv1 = float.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Palun sisestada teine arv.");
+            //float arv2 = 0;
+            //arv2 = float.Parse(Console.ReadLine());
+
+            //string tehteTüüp = "";
+            //Console.WriteLine("Palun sisestada tehte tüüp (+, -, *, /, ^, v)");
+            //tehteTüüp = Console.ReadLine();
+
+            //double tulemus = 0.0d;
+
+            //Kalkulaator programm
+            //if (tehteTüüp != "")
+            //{
+            //    switch (tehteTüüp)
+            //    {
+            //        default:
+            //            Console.WriteLine("Tehtetüüp pole valitud, tehet ei sooritata.");
+            //            break;
+            //        case "+":
+            //            tulemus = arv1 + arv2;
+            //            break;
+            //        case "*":
+            //            tulemus = arv1 * arv2;
+            //            break;
+            //        case "-":
+            //            tulemus = arv1 - arv2;
+            //            break;
+            //        case "/":
+            //            tulemus = arv1 / arv2;
+            //            break;
+            //        case "^":
+            //            tulemus = Math.Pow(arv1, arv2);
+            //            break;
+            //        case "v":
+            //            tulemus = Math.Pow(arv1, 1 / arv2);
+            //            break;
+            //    }
+            //    Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} =  {tulemus}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Tehet ei saa sooritada, tehte tüüp puudub");
+            //}
+            
+            //Kalkulaator programm if ja else ifiga
+            Console.WriteLine("Palun sisesta esimene arv.");
+            float arv1 = 0;
+            arv1 = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Palun sisestada teine arv.");
+            float arv2 = 0;
+            arv2 = float.Parse(Console.ReadLine());
+
+            string tehteTüüp = "";
+            Console.WriteLine("Palun sisestada tehte tüüp (+, -, *, /, ^, v)");
+            tehteTüüp = Console.ReadLine();
+
+            double tulemus = 0.0d;
+
+
+            if (tehteTüüp == "+")
+            {
+                tulemus = arv1 + arv2;
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else if (tehteTüüp == "-")
+            {
+                tulemus = arv1 - arv2;
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else if (tehteTüüp == "*")
+            {
+                tulemus = arv1 * arv2;
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else if (tehteTüüp == "/")
+            {
+                tulemus = arv1 / arv2;
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else if (tehteTüüp == "^")
+            {
+                tulemus = Math.Pow(arv1, arv2);
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else if (tehteTüüp == "v")
+            {
+                tulemus = Math.Pow(arv1, 1 / arv2);
+                Console.WriteLine($"Teie tehte tulemus on {arv1} {tehteTüüp} {arv2} = {tulemus}");
+            }
+            else
+            {
+                Console.WriteLine("Tehet ei saa sooritada, tehte tüüp puudub");
+            }
+            
 
 
             //*
@@ -180,9 +276,9 @@ namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteineri
             https://meet.google.com/qjt-wofj-gdb
 
             ///* -= S Ü N T A K S =-   */
-            Console.WriteLine("Ommik"); // <-- "1"
-            string vastus = Console.ReadLine(); // <-- "2"
-            Console.WriteLine(":)");
+            //Console.WriteLine("Ommik"); // <-- "1"
+            //string vastus = Console.ReadLine(); // <-- "2"
+            //Console.WriteLine(":)");
             // ;            - iga koodilause koodipoloki sees lõppeb lauselõpumärgiga
             // console      - Console on windowsi süsteemi/C# käsurea adresseerimise paktt, millega saab erinevaid käsurea operatsioone teha
             // .            - kasutatakse adresseerimiseks et saada punktile eelnevast objektist mingisugune meetod funktsioon, mis kirjutatakse pärast punkti, võib mõelda kui kaustasuunas olevat / slashi. Antud juhul kui adresseeritakse reas "1" Console tööriista
@@ -197,7 +293,7 @@ namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteineri
             // //           - tähistab üherealist kommentaari
             // /**/         - tähistab plokk-kommentaari, kõik tärnide vahel olev on välja kommenteeritud
             // ///          - Funktsiooni summary kommentaar, kirjeldab meetodeid, mille tekst kuvatakse välja tooltipina
-                //          - taane - aitab arendajal aru saada, kuskohas millise koodiploki sees kood parasjagu asub, ning aitab järge pidada
+            //          - taane - aitab arendajal aru saada, kuskohas millise koodiploki sees kood parasjagu asub, ning aitab järge pidada
 
             //// andmetüübid
             //string tekst = "mingi loetav tekst";
