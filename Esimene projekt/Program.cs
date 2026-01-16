@@ -1,145 +1,164 @@
 ﻿using System.ComponentModel.Design;
 using System.Threading.Channels;
+using System; // <-- enne nimeruumi, viidatakse selles failis/klassis kasutatud pakettidele/moodulitele ja süsteemi muudele osadele. süsteemi muuks osaks võib olla kas operatsioonisüsteemi võimalused või ka teised projektid. teised projektid viidatakse tavalist solution (.sln) failist.
 
-namespace Esimene_projekt
+namespace Esimene_projekt  // <-- Nimeruum, sisaldab {} sulgude vahel konteinerit kus asub kogu programmi kood nime all "Esimene_projekt"
 {
-    internal class Program
+    internal class Program  // <-- programmi klass, mis on ka omakorda konteiner tüüp, kus sees on kogu programmi kood
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // <-- "Main" on programmi sees olev meeotd mid vaikeväärtusena alati käivitatakse, kui ei ole teist meetodit käivituseks määratud
         {
-            ///* näiteprogramm */
-            //int palk = 2465;
-            //int kulud = 1452;
+            ///* näiteprogramm 1*/
+        //int palk = 2465;
+        //int kulud = 1452;
 
-            //Console.WriteLine("Kas see kuu kulusid või väljaminekuid oli? jah/ei");
-            //string kasutajaVastus = "";
-            //kasutajaVastus = Console.ReadLine();
-            //if (kasutajaVastus == "jah")
-            //{
-            //    Console.WriteLine("sisesta kõik oma kulutused ühe arvuna");
-            //    kulud = int.Parse(Console.ReadLine());
-            //}
+        //Console.WriteLine("Kas see kuu kulusid või väljaminekuid oli? jah/ei");
+        //string kasutajaVastus = "";
+        //kasutajaVastus = Console.ReadLine();
+        //if (kasutajaVastus == "jah")
+        //{
+        //    Console.WriteLine("sisesta kõik oma kulutused ühe arvuna");
+        //    kulud = int.Parse(Console.ReadLine());
+        //}
 
-            //int kontojääk = palk - kulud;
-            //    Console.WriteLine(kontojääk + " puulehtede jääk");
-            //    Console.WriteLine("sisestage oma hästi tehtud töö boonus");
-            //int boonus = int.Parse(Console.ReadLine());
-            //kontojääk = kontojääk + boonus;
-            //    Console.WriteLine("minu lõppväljavõte on: " + kontojääk + " puulehte");
+        //int kontojääk = palk - kulud;
+        //    Console.WriteLine(kontojääk + " puulehtede jääk");
+        //    Console.WriteLine("sisestage oma hästi tehtud töö boonus");
+        //int boonus = int.Parse(Console.ReadLine());
+        //kontojääk = kontojääk + boonus;
+        //    Console.WriteLine("minu lõppväljavõte on: " + kontojääk + " puulehte");
 
-            
 
-            //Programm 2
-            //Console.WriteLine("Tere tulemast baari, palun sisestage oma vanus");
-            //int vanus;
-            //vanus = int.Parse(Console.ReadLine());
-            //if (vanus >= 18)
-            //{
-            //    Console.WriteLine("Tere, nautige meie mojitot 🍋‍");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Vabandust, alaealisi sisse ei lasta, head päeva");
 
-            //Programm 3 vaheajaks
-            //string kasutajanimi = "";
-            //string parool = "";
-            //Console.WriteLine ("tere, sisse logimiseks palun sisestage oma nimi");
-            //kasutajanimi = Console.ReadLine();
-            //if (kasutajanimi == "user1")
-            //{
-            //    Console.WriteLine(); ("tere user1, palun sisestage oma parool");
-            //    parool = Console.ReadLine();
-            //    if (parool == "qwerty")
-            //    {
-            //        Console.WriteLine ("tere tulemast user1, olete edukalt sisse logitud");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
-            //    }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
-            //}
+        //Programm 2
+        //Console.WriteLine("Tere tulemast baari, palun sisestage oma vanus");
+        //int vanus;
+        //vanus = int.Parse(Console.ReadLine());
+        //if (vanus >= 18)
+        //{
+        //    Console.WriteLine("Tere, nautige meie mojitot 🍋‍");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Vabandust, alaealisi sisse ei lasta, head päeva");
 
-            //Programm 3 vaheajaks aga improved
-            //string KasutajaNimi = "";
-            //string Parool = "";
-            //Console.WriteLine("Tere, sisse logimiseks palun sisestage oma nimi");
-            //KasutajaNimi = Console.ReadLine();
-            //Console.WriteLine("Palun sisestage oma parool");
-            //Parool = Console.ReadLine();
-            //if (KasutajaNimi == "user1" && Parool == "qwerty")
-            //{
-            //    Console.WriteLine("Olete edukalt sisse logitud, user1!");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud.");
-            //} 
+        //Programm 3 vaheajaks
+        //string kasutajanimi = "";
+        //string parool = "";
+        //Console.WriteLine ("tere, sisse logimiseks palun sisestage oma nimi");
+        //kasutajanimi = Console.ReadLine();
+        //if (kasutajanimi == "user1")
+        //{
+        //    Console.WriteLine(); ("tere user1, palun sisestage oma parool");
+        //    parool = Console.ReadLine();
+        //    if (parool == "qwerty")
+        //    {
+        //        Console.WriteLine ("tere tulemast user1, olete edukalt sisse logitud");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
+        //    }
+        //}
+        //else
+        //{
+        //    Console.WriteLine("kasutajanimi või parool on vale, sissepääs keelatud");
+        //}
 
-            //Näiteülesanne 5
-            //Console.WriteLine("Kui kaugele oli su viimane kuulitõuge (m)?");
-            //float kaugus = float.Parse(Console.ReadLine());
-            //if (kaugus <= 1.00 && kaugus >= 0.00)
-            //{
-            //    Console.WriteLine("Sa suudad kindlasti rohkem, cmon bruh");
-            //}
-            //else if (kaugus <= 2.00 && kaugus >= 1.01)
-            //{
-            //    Console.WriteLine("Noh tuleb juba, jõuad veel!");
-            //}
-            //else if (kaugus <= 3.00 && kaugus >= 2.01)
-            //{
-            //    Console.WriteLine("Tubli, kolm meetrit umbes, peaaegu, vist... not sure");
-            //}
-            //else if (kaugus < 0)
-            //{
-            //    Console.WriteLine("Ma ei käskinud selja taha visata...");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Ossaraks, seda on varsti orbiidilt näha");
-            //}
+        //Programm 3 vaheajaks aga improved
+        //string KasutajaNimi = "";
+        //string Parool = "";
+        //Console.WriteLine("Tere, sisse logimiseks palun sisestage oma nimi");
+        //KasutajaNimi = Console.ReadLine();
+        //Console.WriteLine("Palun sisestage oma parool");
+        //Parool = Console.ReadLine();
+        //if (KasutajaNimi == "user1" && Parool == "qwerty")
+        //{
+        //    Console.WriteLine("Olete edukalt sisse logitud, user1!");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Kasutajanimi või parool on vale, sissepääs keelatud.");
+        //} 
 
-            //Näiteülesanne 6
-            //Console.WriteLine("Palun sisesta oma vanus");
-            //int isikuVanus = 0;
-            //isikuVanus = int.Parse(Console.ReadLine());
-            //if (isikuVanus <=0)
-            //{
-            //    Console.WriteLine("Ajarändureid me ei teeninda");
-            //}
-            //else if (isikuVanus > 0 && isikuVanus < 18)
-            //{
-            //    Console.WriteLine("Palun sisesta oma nimi");
-            //    string kasutajaNimi = "";
-            //    kasutajaNimi = Console.ReadLine();
-            //    Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsuge siia oma lapsevanem");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Palun kirjuta siia oma Eesnimi");
-            //    string eesNimi = "";
-            //    eesNimi = Console.ReadLine();
-            //    Console.WriteLine("Palun kirjuta siia ka oma Perekonnanimi");
-            //    string perekonnaNimi = "";
-            //    perekonnaNimi = Console.ReadLine();
-            //    if (eesNimi == "" || perekonnaNimi == "")
-            //    {
-            //        Console.WriteLine("Sisestama pidi mõlemad nimed");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine($"Tere päevast {eesNimi} {perekonnaNimi}!");
-            //    }
-            //}
+        //Näiteülesanne 5
+        //Console.WriteLine("Kui kaugele oli su viimane kuulitõuge (m)?");
+        //float kaugus = float.Parse(Console.ReadLine());
+        //if (kaugus <= 1.00 && kaugus >= 0.00)
+        //{
+        //    Console.WriteLine("Sa suudad kindlasti rohkem, cmon bruh");
+        //}
+        //else if (kaugus <= 2.00 && kaugus >= 1.01)
+        //{
+        //    Console.WriteLine("Noh tuleb juba, jõuad veel!");
+        //}
+        //else if (kaugus <= 3.00 && kaugus >= 2.01)
+        //{
+        //    Console.WriteLine("Tubli, kolm meetrit umbes, peaaegu, vist... not sure");
+        //}
+        //else if (kaugus < 0)
+        //{
+        //    Console.WriteLine("Ma ei käskinud selja taha visata...");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Ossaraks, seda on varsti orbiidilt näha");
+        //}
+
+        //Näiteülesanne 6
+        //Console.WriteLine("Palun sisesta oma vanus");
+        //int isikuVanus = 0;
+        //isikuVanus = int.Parse(Console.ReadLine());
+        //if (isikuVanus <=0)
+        //{
+        //    Console.WriteLine("Ajarändureid me ei teeninda");
+        //}
+        //else if (isikuVanus > 0 && isikuVanus < 18)
+        //{
+        //    Console.WriteLine("Palun sisesta oma nimi");
+        //    string kasutajaNimi = "";
+        //    kasutajaNimi = Console.ReadLine();
+        //    Console.WriteLine($"Kallis {kasutajaNimi}, palun kutsuge siia oma lapsevanem");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Palun kirjuta siia oma Eesnimi");
+        //    string eesNimi = "";
+        //    eesNimi = Console.ReadLine();
+        //    Console.WriteLine("Palun kirjuta siia ka oma Perekonnanimi");
+        //    string perekonnaNimi = "";
+        //    perekonnaNimi = Console.ReadLine();
+        //    if (eesNimi == "" || perekonnaNimi == "")
+        //    {
+        //        Console.WriteLine("Sisestama pidi mõlemad nimed");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Tere päevast {eesNimi} {perekonnaNimi}!");
+        //    }
+        //}
 
 
             //*
             //Teooria
+
+            https://meet.google.com/qjt-wofj-gdb
+
+            ///* -= S Ü N T A K S =-   */
+            Console.WriteLine("Ommik"); // <-- "1"
+            string vastus = Console.ReadLine(); // <-- "2"
+            Console.WriteLine(":)");
+            // ;            - iga koodilause koodipoloki sees lõppeb lauselõpumärgiga
+            // console      - Console on windowsi süsteemi/C# käsurea adresseerimise paktt, millega saab erinevaid käsurea operatsioone teha
+            // .            - kasutatakse adresseerimiseks et saada punktile eelnevast objektist mingisugune meetod funktsioon, mis kirjutatakse pärast punkti, võib mõelda kui kaustasuunas olevat / slashi. Antud juhul kui adresseeritakse reas "1" Console tööriista
+            // WriteLine    - funktsioon mida parasjagu kasutatakse. writeline kuvab käsurealse teksti, või kaasaantud parameetreid.
+            // ()           - Sulupaar mis omab funktsiooni tööks vajalikku infot/parameetreid.
+            // {}           - tähistab koodiplokki konteineri jaoks.
+            // []           - tähistab massiivi.
+            // ""           - tähistavad sõne andmetüüpi andmeid. Andmed ise asuvad jutumärkide vahel
+            // "string"     - andmetüüp mis kirjutatakse alati muutuja ette. andmetüübis endas asuvad ka andmetüübile vajalikud funktsioonid
+            // "vastus"     - muutuja, mille nimi on "vastus" mis omab string-tüüpi andmed mis omistatakse sinna sisse omistusoperaatoriga
+            // ReadLine     - funktsioon mida reas "2" kasutatakse. ReadLine loeb käsurea pealt vaikeväärtusena sõne-tüüpi andmeid
 
             //// andmetüübid
             //string tekst = "mingi loetav tekst";
